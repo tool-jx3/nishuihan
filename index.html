@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Q</th>
+                    <th>A</th>
+                </tr>
+                <tr>
+                        <th></th>
+                        <th><input v-model="filter_q"></th>
+                        <th></th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(qa, index) in filteredQA">
+                    <th>{{ index + 1 }}</th>
+                    <th>{{ qa.q }}</th>
+                    <th>{{ qa.a }}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="raw.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
